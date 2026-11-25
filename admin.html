@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ShopStream</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Shop<span>Stream</span></h2>
+        <p class="admin-label">ADMIN PANEL</p>
+
+        <a href="#dashboard" class="active">Dashboard</a>
+        <a href="#products">Manage Products</a>
+        <a href="#orders">Manage Orders</a>
+        <a href="#customers">Customers</a>
+        <a href="#analytics">Sales Analytics</a>
+
+        <a href="home.html" class="back-home">Back to Store</a>
+    </div>
+
+    <main class="main-content">
+
+        <header>
+            <div>
+                <h1>Dashboard Overview</h1>
+                <p>Welcome to your ShopStream admin panel.</p>
+            </div>
+            <a href="login.html" class="logout">Logout</a>
+        </header>
+
+        
+<section class="stats" id="dashboard">
+
+    <div class="stat-card">
+        <h3>Total Sales</h3>
+        <h2 id="dashboard-sales">Rs. 0</h2>
+        <p>Overall revenue</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Orders</h3>
+        <h2 id="dashboard-orders">0</h2>
+        <p>Orders received</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Products</h3>
+        <h2 id="dashboard-products">0</h2>
+        <p>Available products</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Customers</h3>
+        <h2 id="dashboard-customers">0</h2>
+        <p>Registered customers</p>
+    </div>
+
+</section>
+
+
+        
+<section class="content-section" id="products">
+
+    <h2>Manage Products</h2>
+    <p>Add new products or update existing products.</p>
+
+    <form id="product-form">
+
+        <input type="hidden" id="edit-index">
+
+        <input
+            type="text"
+            id="product-name"
+            placeholder="Product Name"
+            required
+        >
+
+        <input
+            type="number"
+            id="product-price"
+            placeholder="Product Price (Rs.)"
+            min="1"
+            required
+        >
+
+        <input
+            type="text"
+            id="product-category"
+            placeholder="Product Category"
+            required
+        >
+
+        <input
+            type="text"
+            id="product-image"
+            placeholder="Product Image URL"
+        >
+
+        <textarea
+            id="product-description"
+            placeholder="Product Description"
+            required
+        ></textarea>
+
+        <button type="submit" id="save-button">
+            Add Product
+        </button>
+
+    </form>
+
+    
+<h3>Product List</h3>
+
+<div class="table-container">
+    <table id="product-list-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="product-table">
+        </tbody>
+    </table>
+</div>
+
+
+</section>
+
+
+        <section id="orders">
+    <h2>Manage Orders</h2>
+    <p>View and manage customer orders.</p>
+
+    <div class="table-container">
+        <table id="orders-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="orders-table-body">
+                <!-- Orders will appear here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+        <section id="customers">
+    <h2>Manage Customers</h2>
+    <p>View customer information and their order history.</p>
+
+    <div class="table-container">
+        <table id="customers-table">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>City</th>
+                    <th>Total Orders</th>
+                </tr>
+            </thead>
+
+            <tbody id="customers-table-body">
+                <!-- Customers will appear here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="analytics">
+    <h2>Sales Analytics</h2>
+    <p>View your store's sales performance.</p>
+
+    <div class="analytics-cards">
+
+        <div class="analytics-card">
+            <h3>Total Sales</h3>
+            <p id="total-sales">Rs. 0</p>
+        </div>
+
+        <div class="analytics-card">
+            <h3>Total Orders</h3>
+            <p id="total-orders">0</p>
+        </div>
+
+        <div class="analytics-card">
+            <h3>Total Customers</h3>
+            <p id="total-customers">0</p>
+        </div>
+
+    </div>
+
+    <h3>Best-Selling Products</h3>
+
+    <div class="table-container">
+        <table id="best-selling-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity Sold</th>
+                </tr>
+            </thead>
+
+            <tbody id="best-selling-body"></tbody>
+        </table>
+    </div>
+</section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

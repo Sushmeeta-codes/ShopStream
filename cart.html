@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | ShopStream</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="home.html" class="logo">Shop<span>Stream</span></a>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="home.html#products">Products</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <!-- Shopping Cart -->
+    <main class="cart-container">
+
+        <h1>My Shopping Cart</h1>
+        <p class="subtitle">Review your selected products before checkout.</p>
+
+        <div class="cart-layout">
+
+            <section class="cart-items">
+                <div id="cart-products">
+                    <!-- Cart products appear here -->
+                </div>
+            </section>
+
+            <aside class="cart-summary">
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">Rs. 0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span>Free</span>
+                </div>
+
+                <hr>
+
+                <div class="summary-row total-row">
+                    <strong>Total</strong>
+                    <strong id="total">Rs. 0</strong>
+                </div>
+
+                <button id="checkout-button">
+                    Proceed to Checkout
+                </button>
+
+                <a href="home.html#products" class="continue-link">
+                    Continue Shopping
+                </a>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>ShopStream</h2>
+        <p>Your everyday shopping destination.</p>
+        <p>© 2026 ShopStream. All rights reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

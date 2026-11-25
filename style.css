@@ -1,0 +1,250 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f4f2;
+    min-height: 100vh;
+}
+
+
+/* MAIN CONTAINER */
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* LEFT BRAND SECTION */
+
+.brand-section {
+    width: 45%;
+    background: linear-gradient(135deg, #302a27, #69544b);
+    color: white;
+    padding: 45px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo-icon {
+    background-color: #d8b49a;
+    color: #302a27;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+.brand-content {
+    max-width: 430px;
+}
+
+.brand-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.brand-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #e5dcd7;
+}
+
+.brand-footer {
+    color: #dfd1c8;
+    font-size: 13px;
+}
+
+
+/* RIGHT FORM SECTION */
+
+.form-section {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 25px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 410px;
+}
+
+.form-box h2 {
+    font-size: 31px;
+    color: #302a27;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #88817d;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+
+/* INPUT FIELDS */
+
+form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #403832;
+    margin-bottom: 9px;
+}
+
+form input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd5d0;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    background-color: white;
+}
+
+form input:focus {
+    border-color: #a67c63;
+    box-shadow: 0 0 0 3px #a67c6320;
+}
+
+
+/* FORM OPTIONS */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #777;
+}
+
+.remember input {
+    accent-color: #8c6752;
+}
+
+.forgot {
+    color: #956d56;
+    cursor: pointer;
+}
+
+
+/* BUTTON */
+
+.main-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #8c6752;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #6f4e3d;
+}
+
+
+/* SWITCH LOGIN / SIGNUP */
+
+.switch-text {
+    margin-top: 25px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+.switch-text a {
+    color: #956d56;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* HIDDEN SECTION */
+
+.hidden {
+    display: none;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+#message {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: #a04435;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .brand-section {
+        display: none;
+    }
+
+    .form-section {
+        width: 100%;
+        min-height: 100vh;
+        padding: 30px 22px;
+    }
+
+    .mobile-logo {
+        display: block;
+        color: #8c6752;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .form-box h2 {
+        font-size: 27px;
+    }
+
+}
